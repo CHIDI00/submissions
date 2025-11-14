@@ -64,7 +64,7 @@ export default function RecentVitals({ onVitalsUpdate }: RecentVitalsProps) {
             {
               name: "Temperature",
               value: data.temp || 0,
-              unit: "°F",
+              unit: "°C",
               status: getStatus("Temperature", data.temp || 0),
               icon: Thermometer,
               lastUpdated: "Just now",

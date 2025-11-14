@@ -154,7 +154,7 @@ const PatientDetail = () => {
                         <div className={`text-2xl font-bold ${getStatusColor(getVitalStatus(patient.currentVitals.temperature, "temperature"))}`}>
                           {patient.currentVitals.temperature}
                         </div>
-                        <div className="text-xs text-muted-foreground">°F</div>
+                        <div className="text-xs text-muted-foreground">°C</div>
                       </div>
 
                       <div className="p-4 bg-accent/50 rounded-lg space-y-2">
@@ -197,7 +197,7 @@ const PatientDetail = () => {
                                 <div className="flex items-center space-x-4 text-sm">
                                   <span className="text-foreground">HR: {reading.heartRate} bpm</span>
                                   <span className="text-foreground">BP: {reading.bloodPressure}</span>
-                                  <span className="text-foreground">Temp: {reading.temperature}°F</span>
+                                  <span className="text-foreground">Temp: {reading.temperature}°C</span>
                                 </div>
                               </div>
                               <Badge className="bg-success text-success-foreground">{reading.status}</Badge>

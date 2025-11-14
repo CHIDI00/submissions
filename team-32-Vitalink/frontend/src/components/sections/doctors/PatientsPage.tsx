@@ -116,7 +116,7 @@ const Patients = () => {
                           </div>
                           <div className="text-center">
                             <div className="text-xs text-muted-foreground">Temp</div>
-                            <div className="text-lg font-semibold text-foreground">{patient.vitals.temperature}°F</div>
+                            <div className="text-lg font-semibold text-foreground">{patient.vitals.temperature}°C</div>
                           </div>
                         </div>
 

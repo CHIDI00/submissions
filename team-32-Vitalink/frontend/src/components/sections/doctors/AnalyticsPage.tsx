@@ -224,7 +224,7 @@ const Analytics = () => {
                 {renderMetricCard("Heart Rate", "heartRate", "bpm", "Normal: 60-100 bpm")}
                 {renderMetricCard("Blood Pressure (Systolic)", "systolic", "mmHg", "Normal: <120 mmHg")}
                 {renderMetricCard("Blood Pressure (Diastolic)", "diastolic", "mmHg", "Normal: <80 mmHg")}
-                {renderMetricCard("Temperature", "temperature", "°F", "Normal: 97-99°F")}
+                {renderMetricCard("Temperature", "temperature", "°C", "Normal: 97-99°C")}
                 {renderMetricCard("Blood Sugar", "bloodSugar", "mg/dL", "Normal: 70-100 mg/dL")}
               </div>
 
@@ -267,7 +267,7 @@ const Analytics = () => {
                                     <td className="px-4 py-3 text-sm text-foreground">
                                       {data.systolic.toFixed(0)}/{data.diastolic.toFixed(0)}
                                     </td>
-                                    <td className="px-4 py-3 text-sm text-foreground">{data.temperature.toFixed(1)}°F</td>
+                                    <td className="px-4 py-3 text-sm text-foreground">{data.temperature.toFixed(1)}°C</td>
                                     <td className="px-4 py-3 text-sm text-foreground">{data.bloodSugar.toFixed(0)} mg/dL</td>
                                   </tr>
                                 ))}
@@ -329,7 +329,7 @@ const Analytics = () => {
                       </li>
                       <li className="flex items-start space-x-2">
                         <span className="text-primary mt-1">•</span>
-                        <span>Temperature consistently normal at {calculateAverage("temperature")}°F</span>
+                        <span>Temperature consistently normal at {calculateAverage("temperature")}°C</span>
                       </li>
                       <li className="flex items-start space-x-2">
                         <span className="text-primary mt-1">•</span>

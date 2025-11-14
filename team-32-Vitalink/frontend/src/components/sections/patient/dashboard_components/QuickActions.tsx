@@ -19,10 +19,10 @@ export default function QuickActions() {
             <MessageCircle className="h-4 w-4 mr-3" />
             Message Doctor
           </Button>
-          <Button variant="outline" className="w-full justify-start h-12">
+          {/* <Button variant="outline" className="w-full justify-start h-12">
             <Calendar className="h-4 w-4 mr-3" />
             Book Appointment
-          </Button>
+          </Button> */}
           <Button variant="outline" className="w-full justify-start h-12">
             <Brain className="h-4 w-4 mr-3" />
             AI Insights
