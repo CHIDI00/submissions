@@ -9,15 +9,13 @@ let conversationHistory: { role: string; text: string }[] = [];
 // Detect if it's English vs Pidgin or others
 const detectLanguage = (text: string): string => {
   const lower = text.trim().toLowerCase();
-  if (/(?:una|dey|abeg|wahala|wetin|go|na|wan|fit|no vex)/.test(lower)) {
-    return "Pidgin";
-  } else if (/(?:haba|wallahi|kai|ina|yaya|nagode|barka)/.test(lower)) {
+  if (/(?:haba|wallahi|kai|ina|yaya|nagode|barka)/.test(lower)) {
     return "Hausa";
   } else if (/(?:bawoni|se|ekaro|nko|epele|kaabo)/.test(lower)) {
     return "Yoruba";
   } else if (/(?:kedụ|bia|ọ|ị|anyị|unu|anyị)/.test(lower)) {
     return "Igbo";
-  }
+  } 
   return "English";
 };
 
