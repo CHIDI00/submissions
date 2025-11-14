@@ -165,7 +165,7 @@ export default function AIHealthSuggestions() {
       <Card className="shadow-soft">
         <CardHeader>
           <CardTitle className="flex items-center space-x-2">
-            <Brain className="h-5 w-5 text-primary" />
+            <Brain className="w-5 h-5 text-primary" />
             <span>AI Health Assistant</span>
           </CardTitle>
           <CardDescription>Loading your health data...</CardDescription>
@@ -192,7 +192,7 @@ export default function AIHealthSuggestions() {
       <Card className="shadow-soft">
         <CardHeader>
           <CardTitle className="flex items-center space-x-2">
-            <Brain className="h-5 w-5 text-primary" />
+            <Brain className="w-5 h-5 text-primary" />
             <span>AI Health Assistant</span>
           </CardTitle>
           <CardDescription>Personalized recommendations based on your latest vitals</CardDescription>
@@ -201,14 +201,14 @@ export default function AIHealthSuggestions() {
         <CardContent>
           <div className="space-y-4">
             {aiSuggestions.map((suggestion, index) => (
-              <div key={index} className="p-4 rounded-lg border hover:bg-accent/50 transition-colors">
+              <div key={index} className="p-4 transition-colors border rounded-lg hover:bg-accent/50">
                 <div className="flex items-start justify-between">
                   <div className="flex items-start space-x-3">
-                    <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center">
-                      <suggestion.icon className="h-5 w-5 text-primary" />
+                    <div className="flex items-center justify-center w-10 h-10 rounded-full bg-primary/10">
+                      <suggestion.icon className="w-5 h-5 text-primary" />
                     </div>
                     <div className="flex-1">
-                      <div className="flex items-center space-x-2 mb-1">
+                      <div className="flex items-center mb-1 space-x-2">
                         <h4 className="font-semibold text-foreground">{suggestion.title}</h4>
                         <span className={`px-2 py-1 rounded-full text-xs font-medium ${getPriorityColor(suggestion.priority)}`}>
                           {suggestion.priority}
@@ -223,11 +223,11 @@ export default function AIHealthSuggestions() {
 
             {/* Gemini AI Interaction */}
             <div className="mt-6">
-              <Button onClick={handleAskAI} className="w-full bg-primary text-white" disabled={thinking}>
-                {thinking ? "Analyzing your vitals..." : "Ask about my health"}
+              <Button onClick={handleAskAI} className="w-full text-white bg-primary" disabled={thinking}>
+                {thinking ? "Analyzing your vitals..." : "Ask about my health."}
               </Button>
 
-              {aiMessage && <p className="mt-4 text-sm text-muted-foreground whitespace-pre-wrap">{aiMessage}</p>}
+              {aiMessage && <p className="mt-4 text-sm whitespace-pre-wrap text-muted-foreground">{aiMessage}</p>}
             </div>
           </div>
         </CardContent>
