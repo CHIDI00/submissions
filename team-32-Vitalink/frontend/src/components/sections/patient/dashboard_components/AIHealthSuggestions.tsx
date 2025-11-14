@@ -154,7 +154,7 @@ export default function AIHealthSuggestions() {
       },
     ];
 
-    const prompt = `How am I doing today?\nVitals:\n${JSON.stringify(formattedVitals, null, 2)}`;
+    const prompt = `How am I doing today?\nVitals:\n${JSON.stringify(formattedVitals, null, 2)}.`;
     const response = await getGeminiResponse(prompt);
     setAiMessage(response);
     setThinking(false);
