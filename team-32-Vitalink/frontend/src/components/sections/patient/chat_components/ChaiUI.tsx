@@ -197,7 +197,7 @@ const ChatUI = () => {
             <div className="p-4 border-b bg-card flex items-center justify-between flex-shrink-0">
               <div className="flex flex-col">
                 <div className="flex items-center space-x-2">
-                  <RiRobot2Fill size={20} className="text-blue-600" />
+                      <SiGoogledisplayandvideo360 size={20} className="text-blue-600 mt-1" />
                   <span className="text-sm">Health Bot</span>
                 </div>
                 <div>
