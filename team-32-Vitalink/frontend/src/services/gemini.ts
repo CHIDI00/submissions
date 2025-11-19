@@ -19,6 +19,8 @@ const detectLanguage = (text: string): string => {
   return "English";
 };
 
+
+
 export const getGeminiResponse = async (
   message: string,
   mode: "simple" | "detailed" = "detailed"
